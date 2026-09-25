@@ -1,11 +1,14 @@
 import { AwardList } from "@/components/award-list";
+import { RainbowText } from "@/components/rainbow-text";
 import { Section } from "@/components/section";
 import { site } from "@/lib/site";
 
 export default function Home() {
   return (
     <main className="mx-auto w-full max-w-2xl flex-1 px-6">
-      <h1 className="text-2xl font-medium tracking-tight">{site.name}</h1>
+      <h1 className="text-3xl font-medium tracking-tight">
+        Hi, I&rsquo;m {site.name}!{" "}
+      </h1>
 
       <p className="mt-4 text-lg leading-relaxed text-balance">
         I&rsquo;m a Computer Science graduate @{" "}
@@ -34,13 +37,26 @@ export default function Home() {
           fighting games
         </a>{" "}
         and the{" "}
-        <a
-          href="https://www.youtube.com/watch?v=JzS96auqau0"
-          className="underline underline-offset-4 transition-colors hover:text-accent"
-        >
-          FGC
-        </a>
-        . I also like to climb colored rocks and lift weights!
+        <span className="group relative inline-block">
+          <a
+            href="https://www.youtube.com/watch?v=JzS96auqau0"
+            className="underline underline-offset-4 transition-colors hover:text-accent"
+          >
+            FGC
+          </a>
+          <span
+            role="tooltip"
+            className="pointer-events-none absolute top-full left-1/2 z-10 mt-2 flex -translate-x-1/2 items-center gap-1.5 rounded border border-border bg-background px-2.5 py-1.5 text-sm whitespace-nowrap text-muted opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute -top-[5px] left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-t border-l border-border bg-background"
+            />
+            <span aria-hidden="true">🕹️</span>
+            Fighting Game Community
+          </span>
+        </span>
+        . I also like to climb <RainbowText>colored</RainbowText> rocks and lift weights!
       </p>
 
       <p className="mt-4 text-lg leading-relaxed text-balance">

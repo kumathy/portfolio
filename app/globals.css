@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f0eb;
+  --background: #f0e9e1;
   --foreground: #2c2a27;
   --muted: #6f6960;
-  --border: #ece7e1;
+  --border: #d8cdc0;
   --accent: #7a5745;
 }
 
@@ -29,7 +29,7 @@
 }
 
 :root[data-theme="dark"] {
-  --background: #1c1a19;
+  --background: #1b1919;
   --foreground: #ede9e4;
   --muted: #9b9188;
   --border: #2b2622;
@@ -68,6 +68,43 @@
 
 :root[data-theme="light"] [data-theme-label="light"] {
   display: none;
+}
+
+.rainbow-word:hover > span {
+  animation: rainbow-letter 0.7s step-end infinite;
+}
+
+@keyframes rainbow-letter {
+  0% {
+    color: #c9772f;
+  }
+  14.29% {
+    color: #c8574a;
+  }
+  28.57% {
+    color: #b3506b;
+  }
+  42.86% {
+    color: #8a5f9c;
+  }
+  57.14% {
+    color: #5f6b9e;
+  }
+  71.43% {
+    color: #4f7d8a;
+  }
+  85.71% {
+    color: #6f8a4f;
+  }
+  100% {
+    color: #c9772f;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-word:hover > span {
+    animation-play-state: paused;
+  }
 }
 
 body {
