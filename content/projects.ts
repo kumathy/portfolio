@@ -11,31 +11,32 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "placeholder-one",
-    title: "Project One",
+    slug: "modsquad",
+    title: "Modsquad",
     year: "2026",
-    blurb: "Short description of the project.",
-    stack: ["TypeScript", "Next.js", "Postgres"],
+    blurb: "Automated moderation tool for content creation.",
+    stack: ["React", "Electron", "FastAPI", "WhisperX"],
     href: "https://example.com",
-    source: "https://github.com/kumathy",
+    source: "https://github.com/kumathy/Modsquad",
     featured: true,
   },
   {
-    slug: "placeholder-two",
-    title: "Project Two",
+    slug: "quizzical",
+    title: "Quizzical",
     year: "2025",
-    blurb: "Short description of the project.",
-    stack: ["Python", "PyTorch"],
-    source: "https://github.com/kumathy",
+    blurb:
+      "Trivia quiz app that pulls questions from the Open Trivia Database API.",
+    stack: ["React", "JavaScript"],
+    source: "https://github.com/kumathy/react-projects",
     featured: true,
   },
   {
-    slug: "placeholder-three",
-    title: "Project Three",
-    year: "2025",
-    blurb: "Short description of the project.",
-    stack: ["React", "Firebase"],
-    source: "https://github.com/kumathy",
+    slug: "fitquest",
+    title: "FitQuest",
+    year: "2023",
+    blurb: "Gamified Android fitness app.",
+    stack: ["Kotlin", "Firebase", "Android SDK"],
+    source: "https://github.com/kumathy/FitQuest",
   },
 ];
 
