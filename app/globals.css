@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfcfc;
-  --foreground: #16161a;
-  --muted: #6b6b76;
-  --border: #e5e5e9;
-  --accent: #2f5fd0;
+  --background: #f5f0eb;
+  --foreground: #2c2a27;
+  --muted: #6f6960;
+  --border: #ece7e1;
+  --accent: #7a5745;
 }
 
 @theme inline {
@@ -19,13 +19,55 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0d0d0f;
-    --foreground: #ededf0;
-    --muted: #8e8e99;
-    --border: #232328;
-    --accent: #8fb0ff;
+  :root:not([data-theme="light"]) {
+    --background: #14110f;
+    --foreground: #ede9e4;
+    --muted: #9b9188;
+    --border: #2b2622;
+    --accent: #c9997c;
   }
+}
+
+:root[data-theme="dark"] {
+  --background: #1c1a19;
+  --foreground: #ede9e4;
+  --muted: #9b9188;
+  --border: #2b2622;
+  --accent: #c9997c;
+}
+
+[data-theme-label="dark"] {
+  display: inline-flex;
+}
+
+[data-theme-label="light"] {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [data-theme-label="dark"] {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) [data-theme-label="light"] {
+    display: inline-flex;
+  }
+}
+
+:root[data-theme="dark"] [data-theme-label="dark"] {
+  display: none;
+}
+
+:root[data-theme="dark"] [data-theme-label="light"] {
+  display: inline-flex;
+}
+
+:root[data-theme="light"] [data-theme-label="dark"] {
+  display: inline-flex;
+}
+
+:root[data-theme="light"] [data-theme-label="light"] {
+  display: none;
 }
 
 body {

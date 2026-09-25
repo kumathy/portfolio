@@ -8,7 +8,7 @@ function ProjectItem({ project }: { project: Project }) {
           {project.href ? (
             <a
               href={project.href}
-              className="underline decoration-border underline-offset-4 transition-colors hover:decoration-accent hover:text-accent"
+              className="underline underline-offset-4 transition-colors hover:text-accent"
             >
               {project.title}
             </a>
@@ -25,6 +25,14 @@ function ProjectItem({ project }: { project: Project }) {
 
       <div className="mt-3 flex flex-wrap items-baseline gap-x-4 gap-y-2 font-mono text-xs text-muted">
         <span>{project.stack.join(" · ")}</span>
+        {project.href ? (
+          <a
+            href={project.href}
+            className="text-accent underline underline-offset-4 transition-colors hover:text-foreground"
+          >
+            Live demo ↗
+          </a>
+        ) : null}
         {project.source ? (
           <a
             href={project.source}

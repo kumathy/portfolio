@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { site } from "@/lib/site";
 
 const nav = [
@@ -15,7 +16,7 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="mx-auto w-full max-w-2xl px-6 pt-12 pb-16">
+    <header className="mx-auto flex w-full max-w-2xl items-baseline justify-between gap-6 px-6 pt-12 pb-16">
       <nav className="flex gap-5 text-sm text-muted">
         {nav.map((item) => {
           const active = pathname === item.href;
@@ -42,6 +43,8 @@ export function SiteHeader() {
           resume
         </a>
       </nav>
+
+      <ThemeToggle />
     </header>
   );
 }

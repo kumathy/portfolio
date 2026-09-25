@@ -2,35 +2,51 @@ import { experience } from "@/content/experience";
 
 export function ExperienceList() {
   return (
-    <ul className="space-y-6">
+    <ul>
       {experience.map((role) => (
         <li
           key={`${role.company}-${role.period}`}
-          className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+          className="border-t border-border py-6 first:border-t-0 first:pt-0"
         >
-          <div>
-            <span className="font-medium">
-              {role.href ? (
-                <a
-                  href={role.href}
-                  className="underline decoration-border underline-offset-4 transition-colors hover:decoration-accent hover:text-accent"
-                >
-                  {role.company}
-                </a>
-              ) : (
-                role.company
-              )}
-            </span>
-            <span className="text-muted"> — {role.title}</span>
-            {role.notes?.map((note) => (
-              <p key={note} className="mt-1 text-sm text-muted">
-                {note}
-              </p>
-            ))}
-          </div>
-          <span className="shrink-0 font-mono text-xs text-muted">
-            {role.period}
-          </span>
+          <details className="group">
+            <summary className="group/sum flex cursor-pointer list-none items-baseline justify-between gap-4 [&::-webkit-details-marker]:hidden">
+              <h3 className="font-medium">
+                <span className="mr-2 inline-block font-mono text-xs text-muted transition group-open:rotate-90 group-hover/sum:text-foreground">
+                  &rsaquo;
+                </span>
+                {role.href ? (
+                  <a
+                    href={role.href}
+                    className="underline underline-offset-4 transition-colors hover:text-accent"
+                  >
+                    {role.company}
+                  </a>
+                ) : (
+                  role.company
+                )}
+                <span className="text-muted"> — {role.title}</span>
+              </h3>
+              <span className="shrink-0 font-mono text-xs text-muted">
+                {role.period}
+              </span>
+            </summary>
+
+            <div className="pl-5">
+              {role.notes?.length ? (
+                <div className="mt-2 space-y-1 text-muted">
+                  {role.notes.map((note) => (
+                    <p key={note}>{note}</p>
+                  ))}
+                </div>
+              ) : null}
+
+              {role.technologies.length ? (
+                <div className="mt-3 font-mono text-xs text-muted">
+                  {role.technologies.join(" · ")}
+                </div>
+              ) : null}
+            </div>
+          </details>
         </li>
       ))}
     </ul>
