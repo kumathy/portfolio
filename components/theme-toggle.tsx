@@ -23,13 +23,13 @@ export function ThemeToggle() {
       type="button"
       onClick={toggle}
       aria-label="Switch color theme"
-      className="text-muted transition-colors hover:text-foreground"
+      className="inline-flex items-center text-muted transition-colors hover:text-foreground"
     >
       <span data-theme-label="dark">
-        <MoonIcon className="h-4 w-4" />
+        <MoonIcon className="h-5 w-5" />
       </span>
       <span data-theme-label="light">
-        <SunIcon className="h-4 w-4" />
+        <SunIcon className="h-5 w-5" />
       </span>
     </button>
   );
