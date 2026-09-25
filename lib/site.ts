@@ -2,9 +2,10 @@ export const site = {
   name: "Anh Tran",
   role: "Software engineer",
   school: "University of New Brunswick",
+  schoolUrl: "https://www.unb.ca/",
   grad: "BCS 2026",
   url: "https://example.com",
-  email: "you@example.com",
+  email: "tranlamtuananh2003@gmail.com",
   resume: "/resume.pdf",
   socials: [
     { label: "GitHub", href: "https://github.com/kumathy" },
