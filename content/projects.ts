@@ -16,7 +16,6 @@ export const projects: Project[] = [
     year: "2026",
     blurb: "Automated moderation tool for content creation.",
     stack: ["React", "Electron", "FastAPI", "WhisperX"],
-    href: "https://example.com",
     source: "https://github.com/kumathy/Modsquad",
     featured: true,
   },
@@ -27,6 +26,7 @@ export const projects: Project[] = [
     blurb:
       "Trivia quiz app that pulls questions from the Open Trivia Database API.",
     stack: ["React", "JavaScript"],
+    href: "https://kumathy.github.io/react-projects/quizzical/",
     source: "https://github.com/kumathy/react-projects",
     featured: true,
   },

@@ -26,7 +26,7 @@ export default function Home() {
       </p>
 
       <p className="mt-4 text-lg leading-relaxed text-balance">
-        I have a great passion for{" "}
+        Outside of work, I have a great passion for{" "}
         <a
           href="https://en.wikipedia.org/wiki/Fighting_game"
           className="underline underline-offset-4 transition-colors hover:text-accent"
@@ -40,8 +40,7 @@ export default function Home() {
         >
           FGC
         </a>
-        . During my spare time, I also like to climb colored rocks and lift
-        weights!
+        . I also like to climb colored rocks and lift weights!
       </p>
 
       <p className="mt-4 text-lg leading-relaxed text-balance">
