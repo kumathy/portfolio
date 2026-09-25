@@ -2,19 +2,14 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 
 const nav = [
-  { href: "/work", label: "Work" },
-  { href: "/about", label: "About" },
+  { href: "/", label: "home" },
+  { href: "/work", label: "work" },
+  { href: "/hobbies", label: "hobbies" },
 ];
 
 export function SiteHeader() {
   return (
-    <header className="mx-auto flex w-full max-w-2xl items-baseline justify-between gap-6 px-6 pt-12 pb-16">
-      <Link
-        href="/"
-        className="font-medium tracking-tight transition-colors hover:text-accent"
-      >
-        {site.name}
-      </Link>
+    <header className="mx-auto w-full max-w-2xl px-6 pt-12 pb-16">
       <nav className="flex gap-5 text-sm text-muted">
         {nav.map((item) => (
           <Link
@@ -29,7 +24,7 @@ export function SiteHeader() {
           href={site.resume}
           className="transition-colors hover:text-foreground"
         >
-          Resume
+          resume
         </a>
       </nav>
     </header>
