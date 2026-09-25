@@ -17,6 +17,6 @@ export const awards: Award[] = [
   {
     title: "AWS Certified Cloud Practitioner",
     period: "Jun 2025",
-    href: "https://www.credly.com/badges/your-badge-id",
+    href: "https://www.credly.com/badges/03af84e7-7f0c-47e8-9746-660b4ab09b66",
   },
 ];
