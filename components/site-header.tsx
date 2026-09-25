@@ -3,7 +3,8 @@ import { site } from "@/lib/site";
 
 const nav = [
   { href: "/", label: "home" },
-  { href: "/work", label: "work" },
+  { href: "/experience", label: "experience" },
+  { href: "/projects", label: "projects" },
   { href: "/hobbies", label: "hobbies" },
 ];
 
