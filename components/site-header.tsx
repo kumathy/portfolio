@@ -29,7 +29,7 @@ export function SiteHeader() {
           href={site.resume}
           className="transition-colors hover:text-foreground"
         >
-          Résumé
+          Resume
         </a>
       </nav>
     </header>
