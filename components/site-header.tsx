@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { site } from "@/lib/site";
 
 const nav = [
@@ -9,18 +12,29 @@ const nav = [
 ];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="mx-auto w-full max-w-2xl px-6 pt-12 pb-16">
       <nav className="flex gap-5 text-sm text-muted">
-        {nav.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="transition-colors hover:text-foreground"
-          >
-            {item.label}
-          </Link>
-        ))}
+        {nav.map((item) => {
+          const active = pathname === item.href;
+
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              aria-current={active ? "page" : undefined}
+              className={`transition-colors ${
+                active
+                  ? "text-foreground underline underline-offset-4"
+                  : "hover:text-foreground"
+              }`}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
         <a
           href={site.resume}
           className="transition-colors hover:text-foreground"
