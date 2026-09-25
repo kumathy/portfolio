@@ -38,7 +38,16 @@ export const experience: Role[] = [
     company: "SpryPoint",
     title: "Software Developer (Co-op)",
     period: "Sep - Dec 2022",
+    href: "https://sprypoint.com/",
     technologies: ["JavaScript", "KnockoutJS", "Bootstrap", "PostgreSQL"],
     notes: ["Frontend work on Bootstrap UIs with PostgreSQL data"],
+  },
+  {
+    company: "University of New Brunswick",
+    title: "Teaching Assistant",
+    period: "Fall 2023, Winter 2025",
+    href: "https://www.unb.ca/",
+    technologies: ["JavaScript", "KnockoutJS", "Bootstrap", "PostgreSQL"],
+    notes: ["supervised lab sessions for 40+ and grading"],
   },
 ];
