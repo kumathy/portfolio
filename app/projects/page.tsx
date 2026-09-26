@@ -3,7 +3,6 @@ import { ProjectList } from "@/components/project-list";
 import { projects } from "@/content/projects";
 
 export const metadata: Metadata = {
-  title: "Projects",
   description: "Things I've built.",
 };
 
