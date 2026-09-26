@@ -16,8 +16,9 @@ export function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="mx-auto flex w-full max-w-2xl items-center justify-between gap-6 px-6 pt-12 pb-16">
-      <nav className="flex gap-5 text-sm text-muted">
+    <header className="mx-auto w-full max-w-2xl px-6 pt-12 pb-10">
+      <div className="flex items-center justify-between gap-6 border-b border-border pb-6">
+        <nav className="flex gap-5 text-sm text-muted">
         {nav.map((item) => {
           const active = pathname === item.href;
 
@@ -42,9 +43,10 @@ export function SiteHeader() {
         >
           resume
         </a>
-      </nav>
+        </nav>
 
-      <ThemeToggle />
+        <ThemeToggle />
+      </div>
     </header>
   );
 }

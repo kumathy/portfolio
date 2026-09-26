@@ -10,7 +10,7 @@ export function SiteFooter() {
   return (
     <footer className="mx-auto w-full max-w-2xl px-6 pt-20 pb-12">
       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted">
-        <p className="font-mono text-xs">
+        <p className="text-xs">
           © {new Date().getFullYear()} {site.name}
         </p>
         <ul className="flex flex-wrap items-center gap-4">
