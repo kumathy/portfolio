@@ -27,9 +27,9 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               aria-current={active ? "page" : undefined}
-              className={`transition-colors ${
+              className={`relative transition-colors after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:bg-current after:opacity-0 after:transition-opacity after:duration-200 ${
                 active
-                  ? "text-foreground underline underline-offset-4"
+                  ? "text-foreground after:opacity-100"
                   : "hover:text-foreground"
               }`}
             >
