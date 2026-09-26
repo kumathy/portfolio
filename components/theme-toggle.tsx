@@ -1,36 +1,28 @@
 "use client";
 
+import { useTheme } from "next-themes";
 import { LuMoon, LuSun } from "react-icons/lu";
 
 export function ThemeToggle() {
-  function toggle() {
-    const root = document.documentElement;
-    const current =
-      root.dataset.theme ??
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light");
-    const next = current === "dark" ? "light" : "dark";
-
-    root.dataset.theme = next;
-    try {
-      localStorage.setItem("theme", next);
-    } catch {}
-  }
+  const { resolvedTheme, setTheme } = useTheme();
 
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
       aria-label="Switch color theme"
       className="inline-flex items-center text-muted transition-colors hover:text-foreground"
     >
-      <span data-theme-label="dark">
-        <LuMoon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
-      </span>
-      <span data-theme-label="light">
-        <LuSun className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
-      </span>
+      <LuMoon
+        className="h-5 w-5 dark:hidden"
+        strokeWidth={1.5}
+        aria-hidden="true"
+      />
+      <LuSun
+        className="hidden h-5 w-5 dark:block"
+        strokeWidth={1.5}
+        aria-hidden="true"
+      />
     </button>
   );
 }

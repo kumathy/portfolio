@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --background: #f0e9e1;
   --foreground: #2c2a27;
@@ -34,40 +36,6 @@
   --muted: #9b9188;
   --border: #2b2622;
   --accent: #c9997c;
-}
-
-[data-theme-label="dark"] {
-  display: inline-flex;
-}
-
-[data-theme-label="light"] {
-  display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) [data-theme-label="dark"] {
-    display: none;
-  }
-
-  :root:not([data-theme="light"]) [data-theme-label="light"] {
-    display: inline-flex;
-  }
-}
-
-:root[data-theme="dark"] [data-theme-label="dark"] {
-  display: none;
-}
-
-:root[data-theme="dark"] [data-theme-label="light"] {
-  display: inline-flex;
-}
-
-:root[data-theme="light"] [data-theme-label="dark"] {
-  display: inline-flex;
-}
-
-:root[data-theme="light"] [data-theme-label="light"] {
-  display: none;
 }
 
 .rainbow-word:hover > span {
