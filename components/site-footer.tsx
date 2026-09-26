@@ -10,7 +10,7 @@ export function SiteFooter() {
   return (
     <footer className="mx-auto w-full max-w-2xl px-6 pt-20 pb-12">
       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6 text-sm text-muted">
-        <p className="text-xs">
+        <p>
           © {new Date().getFullYear()} {site.name}
         </p>
         <ul className="flex flex-wrap items-center gap-4">
@@ -20,7 +20,7 @@ export function SiteFooter() {
               aria-label="Email"
               className="block transition-colors hover:text-foreground"
             >
-              <MailIcon className="h-4 w-4" />
+              <MailIcon className="h-5 w-5" />
             </a>
           </li>
           {site.socials.map((social) => {
@@ -34,7 +34,7 @@ export function SiteFooter() {
                   className="block transition-colors hover:text-foreground"
                 >
                   {Icon ? (
-                    <Icon className="h-4 w-4" />
+                    <Icon className="h-5 w-5" />
                   ) : (
                     <span>{social.label}</span>
                   )}
