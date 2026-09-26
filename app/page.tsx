@@ -10,7 +10,7 @@ export default function Home() {
         Hi, I&rsquo;m {site.name}!{" "}
       </h1>
 
-      <p className="mt-4 text-lg leading-relaxed text-balance">
+      <p className="mt-4 text-lg leading-relaxed text-pretty">
         I&rsquo;m a Computer Science graduate @{" "}
         <a
           href={site.schoolUrl}
@@ -28,7 +28,7 @@ export default function Home() {
         , building test automation and production alerting.
       </p>
 
-      <p className="mt-4 text-lg leading-relaxed text-balance">
+      <p className="mt-4 text-lg leading-relaxed text-pretty">
         Outside of work, I have a great passion for{" "}
         <a
           href="https://en.wikipedia.org/wiki/Fighting_game"
@@ -60,7 +60,7 @@ export default function Home() {
         weights!
       </p>
 
-      <p className="mt-4 text-lg leading-relaxed text-balance">
+      <p className="mt-4 text-lg leading-relaxed text-pretty">
         I am currently open to any full-time software engineer/SDET roles.
       </p>
 
