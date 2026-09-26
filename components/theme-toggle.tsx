@@ -1,6 +1,6 @@
 "use client";
 
-import { MoonIcon, SunIcon } from "@/components/icons";
+import { LuMoon, LuSun } from "react-icons/lu";
 
 export function ThemeToggle() {
   function toggle() {
@@ -26,10 +26,10 @@ export function ThemeToggle() {
       className="inline-flex items-center text-muted transition-colors hover:text-foreground"
     >
       <span data-theme-label="dark">
-        <MoonIcon className="h-5 w-5" />
+        <LuMoon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
       </span>
       <span data-theme-label="light">
-        <SunIcon className="h-5 w-5" />
+        <LuSun className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
       </span>
     </button>
   );

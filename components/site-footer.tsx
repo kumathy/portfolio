@@ -1,9 +1,11 @@
-import { GitHubIcon, LinkedInIcon, MailIcon } from "@/components/icons";
+import type { IconType } from "react-icons";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { LuMail } from "react-icons/lu";
 import { site } from "@/lib/site";
 
-const socialIcons: Record<string, (props: { className?: string }) => React.ReactNode> = {
-  GitHub: GitHubIcon,
-  LinkedIn: LinkedInIcon,
+const socialIcons: Record<string, IconType> = {
+  GitHub: FaGithub,
+  LinkedIn: FaLinkedin,
 };
 
 export function SiteFooter() {
@@ -20,7 +22,7 @@ export function SiteFooter() {
               aria-label="Email"
               className="block transition-colors hover:text-foreground"
             >
-              <MailIcon className="h-5 w-5" />
+              <LuMail className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
             </a>
           </li>
           {site.socials.map((social) => {
