@@ -1,3 +1,4 @@
+import { CollapseOnClick } from "@/components/collapse-on-click";
 import { experience } from "@/content/experience";
 
 export function ExperienceList() {
@@ -31,7 +32,7 @@ export function ExperienceList() {
               </span>
             </summary>
 
-            <div className="pl-5">
+            <CollapseOnClick className="cursor-pointer pl-5">
               {role.notes?.length ? (
                 <div className="mt-2 space-y-1 text-muted">
                   {role.notes.map((note) => (
@@ -45,7 +46,7 @@ export function ExperienceList() {
                   {role.technologies.join(" · ")}
                 </div>
               ) : null}
-            </div>
+            </CollapseOnClick>
           </details>
         </li>
       ))}
