@@ -3,16 +3,16 @@ import { experience } from "@/content/experience";
 
 export function ExperienceList() {
   return (
-    <ul>
+    <ul className="-mx-3">
       {experience.map((role) => (
         <CollapsibleRow
           key={`${role.company}-${role.period}`}
-          className="cursor-pointer border-t border-border py-6 first:border-t-0 first:pt-0"
+          className="group/row cursor-pointer border-t border-border px-3 py-6 transition-colors first:border-t-0 hover:bg-foreground/5"
         >
           <details className="group">
-            <summary className="group/sum flex cursor-pointer list-none items-baseline justify-between gap-4 [&::-webkit-details-marker]:hidden">
+            <summary className="flex cursor-pointer list-none items-baseline justify-between gap-4 [&::-webkit-details-marker]:hidden">
               <h3 className="font-medium">
-                <span className="mr-2 inline-block font-mono text-xs text-muted transition group-open:rotate-90 group-hover/sum:text-foreground">
+                <span className="mr-2 inline-block font-mono text-xs text-muted transition group-open:rotate-90 group-hover/row:text-foreground">
                   &rsaquo;
                 </span>
                 {role.href ? (

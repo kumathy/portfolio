@@ -47,7 +47,7 @@ export const experience: Role[] = [
     title: "Teaching Assistant",
     period: "Fall 2023, Winter 2025",
     href: "https://www.unb.ca/",
-    technologies: ["JavaScript", "KnockoutJS", "Bootstrap", "PostgreSQL"],
+    technologies: ["Java", "JavaScript", "Python", "Octave", "Racket"],
     notes: ["supervised lab sessions for 40+ and grading"],
   },
 ];

@@ -11,9 +11,7 @@ export default function ProjectsPage() {
     <main className="mx-auto w-full max-w-2xl flex-1 px-6">
       <h1 className="border-b border-border pb-10 text-lg font-medium">Projects</h1>
 
-      <div className="mt-6">
-        <ProjectList projects={projects} />
-      </div>
+      <ProjectList projects={projects} />
     </main>
   );
 }

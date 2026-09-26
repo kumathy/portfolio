@@ -5,9 +5,7 @@ export default function ExperiencePage() {
     <main className="mx-auto w-full max-w-2xl flex-1 px-6">
       <h1 className="border-b border-border pb-10 text-lg font-medium">Experience</h1>
 
-      <div className="mt-6">
-        <ExperienceList />
-      </div>
+      <ExperienceList />
     </main>
   );
 }

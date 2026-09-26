@@ -2,7 +2,7 @@ import type { Project } from "@/content/projects";
 
 function ProjectItem({ project }: { project: Project }) {
   return (
-    <li className="border-t border-border py-6 first:border-t-0 first:pt-0">
+    <li className="border-t border-border py-6 first:border-t-0">
       <div className="flex items-baseline justify-between gap-4">
         <h3 className="font-medium">
           {project.href ? (
