@@ -1,4 +1,5 @@
 import { CollapsibleRow } from "@/components/collapsible-row";
+import { TechList } from "@/components/tech-list";
 import { experience } from "@/content/experience";
 
 export function ExperienceList() {
@@ -42,8 +43,8 @@ export function ExperienceList() {
               ) : null}
 
               {role.technologies.length ? (
-                <div className="mt-3 font-mono text-xs text-muted">
-                  {role.technologies.join(" · ")}
+                <div className="mt-3">
+                  <TechList items={role.technologies} />
                 </div>
               ) : null}
             </div>
