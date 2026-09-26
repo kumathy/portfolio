@@ -46,7 +46,7 @@ export default function Home() {
           </a>
           <span
             role="tooltip"
-            className="pointer-events-none absolute top-full left-1/2 z-10 mt-2 flex -translate-x-1/2 items-center gap-1.5 rounded border border-border bg-background px-2.5 py-1.5 text-sm whitespace-nowrap text-muted opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100"
+            className="pointer-events-none absolute top-full left-1/2 z-10 mt-2 flex -translate-x-1/2 -translate-y-1 items-center gap-1.5 rounded border border-border bg-background px-2.5 py-1.5 text-sm whitespace-nowrap text-muted opacity-0 transition duration-200 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100"
           >
             <span
               aria-hidden="true"

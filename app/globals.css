@@ -107,10 +107,12 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  transition: border-color 150ms ease;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    transition: border-color 150ms ease;
+  }
 }
 
 body {
