@@ -1,13 +1,13 @@
-import { CollapseOnClick } from "@/components/collapse-on-click";
+import { CollapsibleRow } from "@/components/collapsible-row";
 import { experience } from "@/content/experience";
 
 export function ExperienceList() {
   return (
     <ul>
       {experience.map((role) => (
-        <li
+        <CollapsibleRow
           key={`${role.company}-${role.period}`}
-          className="border-t border-border py-6 first:border-t-0 first:pt-0"
+          className="cursor-pointer border-t border-border py-6 first:border-t-0 first:pt-0"
         >
           <details className="group">
             <summary className="group/sum flex cursor-pointer list-none items-baseline justify-between gap-4 [&::-webkit-details-marker]:hidden">
@@ -32,7 +32,7 @@ export function ExperienceList() {
               </span>
             </summary>
 
-            <CollapseOnClick className="cursor-pointer pl-5">
+            <div className="pl-5">
               {role.notes?.length ? (
                 <div className="mt-2 space-y-1 text-muted">
                   {role.notes.map((note) => (
@@ -46,9 +46,9 @@ export function ExperienceList() {
                   {role.technologies.join(" · ")}
                 </div>
               ) : null}
-            </CollapseOnClick>
+            </div>
           </details>
-        </li>
+        </CollapsibleRow>
       ))}
     </ul>
   );
