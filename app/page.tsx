@@ -50,13 +50,14 @@ export default function Home() {
           >
             <span
               aria-hidden="true"
-              className="absolute -top-[5px] left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-t border-l border-border bg-background"
+              className="absolute -top-1.25 left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45 border-t border-l border-border bg-background"
             />
             <span aria-hidden="true">🕹️</span>
             Fighting Game Community
           </span>
         </span>
-        . I also like to climb <RainbowText>colored</RainbowText> rocks and lift weights!
+        . I also like to climb <RainbowText>colored</RainbowText> rocks and lift
+        weights!
       </p>
 
       <p className="mt-4 text-lg leading-relaxed text-balance">
